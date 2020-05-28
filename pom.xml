@@ -108,6 +108,7 @@
     <scm>
         <url>https://github.com/VittorioValent/j-rolamo-generics</url>
         <connection>scm:git:https://github.com/VittorioValent/j-rolamo-generics</connection>
+        <developerConnection>scm:git:https://github.com/VittorioValent/j-rolamo-generics</developerConnection>
         <tag>HEAD</tag>
     </scm>
     <developers>
