@@ -1,7 +1,8 @@
 package it.contrader.jrolamo.generics.controller;
 
+import it.contrader.jrolamo.generics.domain.AbstractDTO;
+import it.contrader.jrolamo.generics.service.ICrudService;
 import javax.validation.Valid;
-
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -9,16 +10,12 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import it.contrader.jrolamo.generics.domain.AbstractDTO;
-import it.contrader.jrolamo.generics.service.ICrudService;
-
 /**
  * This controller contains all CRUD methods. Notice that method
  * {@code create(<DTO> dto)} needs a @Valid input.
  *
  * @author Vittorio Valent
  *
- * @param <DTO>
  * @see ReadController
  * @see ICrudService
  * @since 0.0.1

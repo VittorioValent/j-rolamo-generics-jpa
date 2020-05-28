@@ -11,9 +11,6 @@ import org.springframework.stereotype.Service;
  *
  * @author Vittorio Valent
  *
- * @param <Entity>
- * @param <DTO>
- *
  * @see ICrudService
  * @since 0.0.1
  */

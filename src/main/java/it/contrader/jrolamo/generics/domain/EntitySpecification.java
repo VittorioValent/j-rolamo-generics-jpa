@@ -15,8 +15,6 @@ import org.springframework.data.jpa.domain.Specification;
  *
  * @author Vittorio Valent
  *
- * @param <Entity>
- *
  * @see Specification
  * @since 0.0.1
  */

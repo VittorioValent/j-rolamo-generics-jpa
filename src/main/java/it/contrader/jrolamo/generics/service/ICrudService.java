@@ -12,7 +12,6 @@ import org.springframework.stereotype.Service;
  *
  * @author Vittorio Valent
  *
- * @param <DTO>
  * @see PrivateCrudController
  *
  * @since 0.0.1

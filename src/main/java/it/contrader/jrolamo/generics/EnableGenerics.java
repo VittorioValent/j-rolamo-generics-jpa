@@ -9,6 +9,8 @@ import org.springframework.context.annotation.Import;
 /**
  *
  * @author Vittorio Valent
+ *
+ * @since 0.0.2
  */
 @Import(value = JRolamoGenerics.class)
 @Target(value = {ElementType.TYPE})

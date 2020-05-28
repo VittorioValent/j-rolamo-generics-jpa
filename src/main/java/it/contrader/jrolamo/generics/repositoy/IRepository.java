@@ -4,7 +4,6 @@ import com.querydsl.core.types.EntityPath;
 import com.querydsl.core.types.dsl.StringExpression;
 import com.querydsl.core.types.dsl.StringPath;
 import it.contrader.jrolamo.generics.domain.AbstractModel;
-import it.contrader.jrolamo.generics.domain.EntitySpecification;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.querydsl.QuerydslPredicateExecutor;
@@ -24,8 +23,6 @@ import org.springframework.data.repository.NoRepositoryBean;
  *
  * @author Vittorio Valent
  *
- * @param <Entity>
- * @see EntitySpecification
  * @since 0.0.1
  */
 @NoRepositoryBean
@@ -38,10 +35,6 @@ public interface IRepository<Entity extends AbstractModel>
 
     @Override
     default void customize(QuerydslBindings bindings, EntityPath<Entity> qEntity) {
-        // Removes case-sentive from SQL LIKE
         bindings.bind(String.class).first((SingleValueBinding<StringPath, String>) StringExpression::containsIgnoreCase);
-        // Expression of startWith Strings
-        // bindings.bind(QEntity.entityname.field).first((SingleValueBinding<StringPath,
-        // String>) StringExpression::startsWith);
     }
 }

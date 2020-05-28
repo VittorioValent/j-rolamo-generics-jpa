@@ -1,5 +1,8 @@
 package it.contrader.jrolamo.generics.controller;
 
+import com.querydsl.core.types.Predicate;
+import it.contrader.jrolamo.generics.domain.AbstractDTO;
+import it.contrader.jrolamo.generics.service.ICrudService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Sort.Direction;
@@ -7,20 +10,14 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.querydsl.core.types.Predicate;
-
-import it.contrader.jrolamo.generics.domain.AbstractDTO;
-import it.contrader.jrolamo.generics.service.ICrudService;
-
 /**
  * This Controller handles all read-only requests from client.
  *
  * @author Vittorio Valent
  *
- * @param <DTO>
  *
  * @see CrudController
- * 
+ *
  * @since 0.0.1
  */
 public abstract class PrivateReadController<DTO extends AbstractDTO> {

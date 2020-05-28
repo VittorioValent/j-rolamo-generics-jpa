@@ -12,8 +12,6 @@ import org.springframework.stereotype.Component;
  *
  * @author Vittorio Valent
  *
- * @param <Entity>
- * @param <DTO>
  * @since 0.0.1
  */
 @Component

@@ -15,9 +15,6 @@ import org.springframework.data.domain.Pageable;
  *
  * @author Vittorio Valent
  *
- * @param <Entity>
- * @param <DTO>
- *
  * @see IsOwnerPostAuth
  * @see IsOwnerPreAuth
  * @see AuditDTO

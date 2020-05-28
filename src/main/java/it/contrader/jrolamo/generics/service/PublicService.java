@@ -3,8 +3,8 @@ package it.contrader.jrolamo.generics.service;
 import com.querydsl.core.types.Predicate;
 import it.contrader.jrolamo.generics.domain.AbstractDTO;
 import it.contrader.jrolamo.generics.domain.AbstractModel;
-import it.contrader.jrolamo.generics.repositoy.IRepository;
 import it.contrader.jrolamo.generics.mapper.IMapper;
+import it.contrader.jrolamo.generics.repositoy.IRepository;
 import it.contrader.jrolamo.generics.utils.PatchUtils;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,9 +17,6 @@ import org.springframework.data.jpa.domain.Specification;
  * {@link IService} except those which need authentication to be invoked.
  *
  * @author Vittorio Valent
- *
- * @param <Entity>
- * @param <DTO>
  *
  * @see PrivateService
  * @since 0.0.1

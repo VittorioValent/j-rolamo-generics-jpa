@@ -9,7 +9,6 @@ import org.springframework.util.ReflectionUtils;
  * Component for enable partial update DTO
  *
  * @author Vittorio Valent
- * @param <DTO>
  * @since 0.0.1
  */
 @Component
