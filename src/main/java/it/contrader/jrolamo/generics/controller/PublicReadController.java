@@ -13,16 +13,29 @@ import org.springframework.web.bind.annotation.RequestParam;
  * This Controller handles all read-only requests from client.
  *
  * @author Vittorio Valent
+ * @param <DTO>
  *
  * @see CrudController
  * @since 0.0.1
  */
 public abstract class PublicReadController<DTO extends AbstractDTO> {
 
-	@Autowired
+    /**
+     *
+     */
+    @Autowired
 	protected ICrudService<DTO> service;
 
-	@GetMapping("/public/all")
+    /**
+     *
+     * @param predicate
+     * @param pageSize
+     * @param pageNumber
+     * @param direction
+     * @param sortField
+     * @return
+     */
+    @GetMapping("/public/all")
 	public abstract Page<DTO> getAll(
 			Predicate predicate,
 			Integer pageSize,
@@ -30,7 +43,12 @@ public abstract class PublicReadController<DTO extends AbstractDTO> {
 			Direction direction,
 			String sortField);
 
-	@GetMapping("/public/read")
+    /**
+     *
+     * @param id
+     * @return
+     */
+    @GetMapping("/public/read")
 	public DTO read(@RequestParam Long id) {
 		return service.read(id);
 	}

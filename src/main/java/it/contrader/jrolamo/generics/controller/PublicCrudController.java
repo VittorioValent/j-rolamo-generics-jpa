@@ -11,10 +11,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 
 /**
- * This controller contains all CRUD methods. Notice that method
- * {@code create(<DTO> dto)} needs a @Valid input.
+ * This controller contains all CRUD methods.Notice that method
+ {@code create(<DTO> dto)} needs a @Valid input.
  *
  * @author Vittorio Valent
+ * @param <DTO>
  *
  * @see ReadController
  * @see ICrudService
@@ -22,22 +23,42 @@ import org.springframework.web.bind.annotation.RequestParam;
  */
 public abstract class PublicCrudController<DTO extends AbstractDTO> extends PublicReadController<DTO> {
 
-	@PostMapping("/public/create")
+    /**
+     *
+     * @param dto
+     * @return
+     */
+    @PostMapping("/public/create")
 	public DTO create(@Valid @RequestBody DTO dto) {
 		return service.create(dto);
 	}
 
-	@DeleteMapping("/public/delete/{id}")
+    /**
+     *
+     * @param id
+     */
+    @DeleteMapping("/public/delete/{id}")
 	public void delete(@RequestParam("id") Long id) {
 		service.delete(id);
 	}
 
-	@PutMapping("/public/update")
+    /**
+     *
+     * @param dto
+     * @return
+     */
+    @PutMapping("/public/update")
 	public DTO update(@RequestBody DTO dto) {
 		return service.update(dto);
 	}
 
-	@PatchMapping("/public/update")
+    /**
+     *
+     * @param id
+     * @param dto
+     * @return
+     */
+    @PatchMapping("/public/update")
 	public DTO merge(@RequestParam Long id, @RequestBody DTO dto) {
 
 		return service.merge(id, dto);

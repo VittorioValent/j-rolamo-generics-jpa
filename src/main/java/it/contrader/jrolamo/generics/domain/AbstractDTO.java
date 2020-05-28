@@ -9,6 +9,10 @@ import java.io.Serializable;
  */
 public abstract class AbstractDTO implements Serializable {
 
+    /**
+     *
+     * @return
+     */
     public abstract Long getId();
 
 }

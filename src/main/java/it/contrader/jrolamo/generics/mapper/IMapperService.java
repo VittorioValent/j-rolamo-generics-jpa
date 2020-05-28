@@ -74,6 +74,11 @@ public class IMapperService {
 
     /**
      * Returns the {@link IMapper} for the given source and the target type.
+     * @param <Entity>
+     * @param <DTO>
+     * @param sourceType
+     * @param targetType
+     * @return
      */
     public <Entity extends AbstractModel, DTO extends AbstractDTO> IMapper<Entity, DTO> getMapper(Class<Entity> sourceType, Class<DTO> targetType) {
         String mapperKey = sourceType.getSimpleName() + "-" + targetType.getSimpleName();

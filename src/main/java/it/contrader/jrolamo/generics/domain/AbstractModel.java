@@ -9,5 +9,9 @@ import java.io.Serializable;
  */
 public abstract class AbstractModel implements Serializable {
 
+    /**
+     *
+     * @return
+     */
     public abstract Long getId();
 }

@@ -9,11 +9,12 @@ import lombok.Setter;
 import org.springframework.data.jpa.domain.Specification;
 
 /**
- * All Entity Specifications must extend this class. It has a default filter
- * (the given entity).
+ * All Entity Specifications must extend this class.It has a default filter
+ (the given entity).
  *
  *
  * @author Vittorio Valent
+ * @param <Entity>
  *
  * @see Specification
  * @since 0.0.1
@@ -22,8 +23,18 @@ import org.springframework.data.jpa.domain.Specification;
 @Setter
 public abstract class EntitySpecification<Entity extends AbstractModel> implements Specification<Entity> {
 
+    /**
+     *
+     */
     protected Entity filter;
 
+    /**
+     *
+     * @param root
+     * @param query
+     * @param criteriaBuilder
+     * @return
+     */
     @Override
     public abstract Predicate toPredicate(Root<Entity> root, CriteriaQuery<?> query, CriteriaBuilder criteriaBuilder);
 

@@ -2,11 +2,9 @@ package it.contrader.jrolamo.generics.errorhandling;
 
 import java.util.Arrays;
 import java.util.List;
-
-import org.springframework.http.HttpStatus;
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import org.springframework.http.HttpStatus;
 
 /**
  *
@@ -23,14 +21,24 @@ public class ApiError {
 
 	private List<String> errors;
 
-	public ApiError(final HttpStatus status, final String message, final String error) {
+    /**
+     *
+     * @param status
+     * @param message
+     * @param error
+     */
+    public ApiError(final HttpStatus status, final String message, final String error) {
 		super();
 		this.status = status;
 		this.message = message;
 		errors = Arrays.asList(error);
 	}
 
-	public void setError(final String error) {
+    /**
+     *
+     * @param error
+     */
+    public void setError(final String error) {
 		errors = Arrays.asList(error);
 	}
 }

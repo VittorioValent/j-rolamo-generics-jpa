@@ -13,6 +13,10 @@ import org.springframework.security.core.userdetails.UserDetails;
  */
 public class AuditorAwareImpl implements AuditorAware<String> {
 
+    /**
+     *
+     * @return
+     */
     @Override
     public Optional<String> getCurrentAuditor() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();

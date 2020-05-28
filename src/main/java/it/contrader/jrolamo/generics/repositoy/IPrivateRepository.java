@@ -12,6 +12,7 @@ import org.springframework.data.repository.NoRepositoryBean;
  * pagination
  *
  * @author Vittorio Valent
+ * @param <Entity>
  *
  * @see IsOwnerListPostAuth
  * @since 0.0.1
@@ -19,10 +20,21 @@ import org.springframework.data.repository.NoRepositoryBean;
 @NoRepositoryBean
 public interface IPrivateRepository<Entity extends AuditModel> extends IRepository<Entity> {
 
+    /**
+     *
+     * @param pageable
+     * @return
+     */
     @Override
     @IsOwnerListPostAuth
     public Page<Entity> findAll(Pageable pageable);
 
+    /**
+     *
+     * @param predicate
+     * @param pageable
+     * @return
+     */
     @Override
     @IsOwnerListPostAuth
     public Page<Entity> findAll(Predicate predicate, Pageable pageable);

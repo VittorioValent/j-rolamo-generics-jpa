@@ -22,6 +22,7 @@ import org.springframework.data.repository.NoRepositoryBean;
  * </ul>
  *
  * @author Vittorio Valent
+ * @param <Entity>
  *
  * @since 0.0.1
  */
@@ -33,6 +34,11 @@ public interface IRepository<Entity extends AbstractModel>
         QuerydslPredicateExecutor<Entity>,
         JpaSpecificationExecutor<Entity> {
 
+    /**
+     *
+     * @param bindings
+     * @param qEntity
+     */
     @Override
     default void customize(QuerydslBindings bindings, EntityPath<Entity> qEntity) {
         bindings.bind(String.class).first((SingleValueBinding<StringPath, String>) StringExpression::containsIgnoreCase);
