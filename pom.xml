@@ -4,7 +4,7 @@
 
     <groupId>it.contrader</groupId>
     <artifactId>jrolamo-generics</artifactId>
-    <version>0.0.2</version>
+    <version>0.0.2-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>JrolamoGenerics</name>
@@ -109,7 +109,7 @@
         <url>https://github.com/VittorioValent/j-rolamo-generics</url>
         <connection>scm:git:https://github.com/VittorioValent/j-rolamo-generics</connection>
         <developerConnection>scm:git:https://github.com/VittorioValent/j-rolamo-generics</developerConnection>
-        <tag>jrolamo-generics-0.0.2</tag>
+        <tag>HEAD</tag>
     </scm>
     <developers>
         <developer>
