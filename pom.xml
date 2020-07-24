@@ -4,7 +4,7 @@
 
     <groupId>it.jrolamo</groupId>
     <artifactId>j-rolamo-generics</artifactId>
-    <version>0.0.3-SNAPSHOT</version>
+    <version>0.0.3</version>
     <packaging>jar</packaging>
 
     <name>JRolamoGenerics</name>
@@ -109,7 +109,7 @@
         <url>https://github.com/VittorioValent/j-rolamo-generics</url>
         <connection>scm:git:https://github.com/VittorioValent/j-rolamo-generics</connection>
         <developerConnection>scm:git:https://github.com/VittorioValent/j-rolamo-generics</developerConnection>
-        <tag>HEAD</tag>
+        <tag>j-rolamo-generics-0.0.3</tag>
     </scm>
     <developers>
         <developer>
