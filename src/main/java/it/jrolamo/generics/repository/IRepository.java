@@ -1,4 +1,4 @@
-package it.jrolamo.generics.repositoy;
+package it.jrolamo.generics.repository;
 
 import com.querydsl.core.types.EntityPath;
 import com.querydsl.core.types.dsl.StringExpression;

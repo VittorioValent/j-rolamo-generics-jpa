@@ -4,7 +4,7 @@ import com.querydsl.core.types.Predicate;
 import it.jrolamo.generics.domain.AbstractDTO;
 import it.jrolamo.generics.domain.AbstractModel;
 import it.jrolamo.generics.mapper.IMapper;
-import it.jrolamo.generics.repositoy.IRepository;
+import it.jrolamo.generics.repository.IRepository;
 import it.jrolamo.generics.utils.PatchUtils;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
