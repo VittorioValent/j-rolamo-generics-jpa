@@ -1,14 +1,16 @@
 package it.jrolamo.generics.controller;
 
-import it.jrolamo.generics.domain.AbstractDTO;
-import it.jrolamo.generics.service.ICrudService;
 import javax.validation.Valid;
+
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import it.jrolamo.generics.domain.AbstractDTO;
+import it.jrolamo.generics.service.ICrudService;
 
 /**
  * This controller contains all CRUD methods.Notice that method
@@ -60,7 +62,6 @@ public abstract class PublicCrudController<DTO extends AbstractDTO> extends Publ
      */
     @PatchMapping("/public/update")
     public DTO merge(@RequestParam Long id, @RequestBody DTO dto) {
-
         return service.merge(id, dto);
     }
 }
