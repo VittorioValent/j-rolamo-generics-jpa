@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>it.jrolamo</groupId>
-    <artifactId>j-rolamo-generics</artifactId>
+    <artifactId>j-rolamo-generics-jpa</artifactId>
     <version>0.0.5-SNAPSHOT</version>
     <packaging>jar</packaging>
 
@@ -98,7 +98,7 @@
                     <artifactId>maven-release-plugin</artifactId>
                     <version>2.5.2</version>
                     <configuration>
-                        <tagBase>https://github.com/VittorioValent/j-rolamo-generics/tags</tagBase>
+                        <tagBase>https://github.com/VittorioValent/j-rolamo-generics-jpa/tags</tagBase>
                         <releaseProfiles>release</releaseProfiles>
                     </configuration>
                 </plugin>
@@ -107,9 +107,9 @@
     </build>
 
     <scm>
-        <url>https://github.com/VittorioValent/j-rolamo-generics</url>
-        <connection>scm:git:https://github.com/VittorioValent/j-rolamo-generics</connection>
-        <developerConnection>scm:git:https://github.com/VittorioValent/j-rolamo-generics</developerConnection>
+        <url>https://github.com/VittorioValent/j-rolamo-genericsi-jpa</url>
+        <connection>scm:git:https://github.com/VittorioValent/j-rolamo-generics-jpa</connection>
+        <developerConnection>scm:git:https://github.com/VittorioValent/j-rolamo-generics-jpa</developerConnection>
         <tag>HEAD</tag>
     </scm>
 
@@ -117,7 +117,7 @@
         <repository>
             <id>github</id>
             <name>GitHub VittorioValent Apache Maven Packages</name>
-            <url>https://maven.pkg.github.com/VittorioValent/j-rolamo-generics</url>
+            <url>https://maven.pkg.github.com/VittorioValent/j-rolamo-generics-jpa</url>
         </repository>
     </distributionManagement>
 
